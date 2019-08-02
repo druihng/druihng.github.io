@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
-  <title>计算机终端（computer terminal）详解 | 漫漫知何处</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-  
-  <meta name="description" content="前言，在学习《Linux命令和Shell脚本编程大全》的第二章时遇到了困难，主要原因是对终端和及其相关的一些计算机概念、计算机发展史的不了解造成的。因此在参考了很多相关资料后，写下这篇文章帮助自己学习和理解，同时让大家来验证它的正确性。 由于人和机器是两个相互独立的实体，当人需要与机器进行交互而使用机器时，必须借助一个人机交互的接口（interface），它主要负责向主机输入信息，并把主机的结果对">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="前言，在学习《Linux命令和Shell脚本编程大全》的第二章时遇到了困难，主要原因是对终端和及其相关的一些计算机概念、计算机发展史的不了解造成的。因此在参考了很多相关资料后，写下这篇文章帮助自己学习和理解，同时让大家来验证它的正确性。 由于人和机器是两个相互独立的实体，当人需要与机器进行交互而使用机器时，必须借助一个人机交互的接口（interface），它主要负责向主机输入信息，并把主机的结果对">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机终端（Computer Terminal）详解">
 <meta property="og:url" content="http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/index.html">
-<meta property="og:site_name" content="漫漫知何处">
+<meta property="og:site_name" content="druihng">
 <meta property="og:description" content="前言，在学习《Linux命令和Shell脚本编程大全》的第二章时遇到了困难，主要原因是对终端和及其相关的一些计算机概念、计算机发展史的不了解造成的。因此在参考了很多相关资料后，写下这篇文章帮助自己学习和理解，同时让大家来验证它的正确性。 由于人和机器是两个相互独立的实体，当人需要与机器进行交互而使用机器时，必须借助一个人机交互的接口（interface），它主要负责向主机输入信息，并把主机的结果对">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="f:/Repo/BlogHub/Hexo/source/_images/Computer%20Terminal/accordion.jpg">
@@ -28,180 +25,127 @@
 <meta name="twitter:title" content="计算机终端（Computer Terminal）详解">
 <meta name="twitter:description" content="前言，在学习《Linux命令和Shell脚本编程大全》的第二章时遇到了困难，主要原因是对终端和及其相关的一些计算机概念、计算机发展史的不了解造成的。因此在参考了很多相关资料后，写下这篇文章帮助自己学习和理解，同时让大家来验证它的正确性。 由于人和机器是两个相互独立的实体，当人需要与机器进行交互而使用机器时，必须借助一个人机交互的接口（interface），它主要负责向主机输入信息，并把主机的结果对">
 <meta name="twitter:image" content="f:/Repo/BlogHub/Hexo/source/_images/Computer%20Terminal/accordion.jpg">
-  
-    <link rel="alternate" href="/atom.xml" title="漫漫知何处" type="application/atom+xml">
-  
-
-  
-
-  <link rel="icon" href="/css/images/mylogo.jpg">
-  <link rel="apple-touch-icon" href="/css/images/mylogo.jpg">
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <style type="text/css">
-    @font-face{font-family:futura-pt; src:url("css/fonts/FuturaPTBold.otf") format("woff");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt-light; src:url("css/fonts/FuturaPTBook.otf") format("woff");font-weight:lighter;font-style:normal;}
-    @font-face{font-family:futura-pt-italic; src:url("css/fonts/FuturaPTBookOblique.otf") format("woff");font-weight:400;font-style:italic;}
-}
-
-  </style>
-  <link rel="stylesheet" href="/css/style.css">
-
-  <script src="/js/jquery-3.1.1.min.js"></script>
-  <script src="/js/bootstrap.js"></script>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.css">
-
-  
-    <link rel="stylesheet" href="/css/dialog.css">
-  
-
-  
-
-  
-    <link rel="stylesheet" href="/css/header-post.css">
-  
-
-  
-  
-  
-    <link rel="stylesheet" href="/css/vdonate.css">
-  
-
-</head>
-</html>
-
-
-  <body data-spy="scroll" data-target="#toc" data-offset="50">
-
-
-  
-  <div id="container">
-    <div id="wrap">
-      
-        <header>
-
-    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="navbar-inner">
+    
+    
+        
           
-          <div class="container"> 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>计算机终端（Computer Terminal）详解</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
 
-            
-              <a class="brand" style="
-                 margin-top: 0px;" href="#" data-toggle="modal" data-target="#myModal">
-                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
-              </a>
-            
-            
-            <div class="navbar-collapse collapse">
-              <ul class="hnav navbar-nav">
-                
-                  <li> <a class="main-nav-link" href="/">Home</a> </li>
-                
-                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
-                
-                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
-                
-                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
-                
-                  <li> <a class="main-nav-link" href="/about">About</a> </li>
-                
-                  <li><div id="search-form-wrap">
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&text=计算机终端（Computer Terminal）详解"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&title=计算机终端（Computer Terminal）详解"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&is_video=false&description=计算机终端（Computer Terminal）详解"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=计算机终端（Computer Terminal）详解&body=Check out this article: http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&title=计算机终端（Computer Terminal）详解"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&title=计算机终端（Computer Terminal）详解"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&title=计算机终端（Computer Terminal）详解"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&title=计算机终端（Computer Terminal）详解"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&name=计算机终端（Computer Terminal）详解&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
 
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder>
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something...">
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
     </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-计算机终端的发展"><span class="toc-number">1.</span> <span class="toc-text">1. 计算机终端的发展</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#参考书籍"><span class="toc-number"></span> <span class="toc-text">参考书籍</span></a>
+    </li></div>
+  </span>
 </div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/js/insight.js"></script>
 
-</div></li>
-            </ul></div>
-          </div>
-                
-      </div>
-    </div>
-
-</header>
-
-
-
-      
-            
-      <div id="content" class="outer">
-        
-          <section id="main" style="float:none;"><article id="post-计算机终端（Computer-Terminal）详解" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost">
-  <div id="articleInner" class="article-inner">
     
-    
-      <header class="article-header">
+    <div class="content index py4">
         
-  
-    <h1 class="thumb" itemprop="name">
-      计算机终端（Computer Terminal）详解
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        计算机终端（Computer Terminal）详解
     </h1>
-  
 
-      </header>
-    
-    <div class="article-meta">
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">druihng</span>
+      </span>
       
-	<a href="/2019/03/31/计算机终端（Computer-Terminal）详解/" class="article-date">
-	  <time datetime="2019-03-31T03:06:51.000Z" itemprop="datePublished">2019-03-31</time>
-	</a>
+    <div class="postdate">
+      
+        <time datetime="2019-03-31T03:06:51.000Z" itemprop="datePublished">2019-03-31</time>
+        
+      
+    </div>
+
 
       
-      
-	<a class="article-views">
-	<span id="busuanzi_container_page_pv">
-		PV:<span id="busuanzi_value_page_pv"></span>
-	</span>
-	</a>
 
       
 
     </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong><em>前言</em></strong>，在学习《Linux命令和Shell脚本编程大全》的第二章时遇到了困难，主要原因是对终端和及其相关的一些计算机概念、计算机发展史的不了解造成的。因此在参考了很多相关资料后，写下这篇文章帮助自己学习和理解，同时让大家来验证它的正确性。</p>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><strong><em>前言</em></strong>，在学习《Linux命令和Shell脚本编程大全》的第二章时遇到了困难，主要原因是对终端和及其相关的一些计算机概念、计算机发展史的不了解造成的。因此在参考了很多相关资料后，写下这篇文章帮助自己学习和理解，同时让大家来验证它的正确性。</p>
 <p>由于人和机器是两个相互独立的实体，当人需要与机器进行交互而使用机器时，必须借助一个人机交互的接口（interface），它主要负责向主机输入信息，并把主机的结果对外输出显示。</p>
 <blockquote>
 <p>终端（Terminal），其词汇本身的意义为「终点站；末端；（电路）的端子，线接头」。</p>
@@ -298,274 +242,98 @@
 <p><a href="https://zhuanlan.zhihu.com/p/21895357" target="_blank" rel="noopener">带你逛西雅图活电脑博物馆（五） - 古董电脑室 - 知乎专栏</a></p>
 <h1 id="参考书籍"><a href="#参考书籍" class="headerlink" title="参考书籍"></a>参考书籍</h1><p>《Linux命令行与Shell脚本编程大全》</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      
-        <div id="donation_div"></div>
-
-<script src="/js/vdonate.js"></script>
-<script>
-var a = new Donate({
-  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
-  btnText: 'Donate', // 可选参数，打赏按钮文字
-  el: document.getElementById('donation_div'),
-  wechatImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png',
-  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
-});
-</script>
-      
-      
-      <div>
-        <ul class="post-copyright">
-          <li class="post-copyright-author">
-          <strong>Post author:  </strong>林小里
-          </li>
-          <li class="post-copyright-link">
-          <strong>Post link:  </strong>
-          <a href="/2019/03/31/计算机终端（Computer-Terminal）详解/" target="_blank" title="计算机终端（Computer Terminal）详解">http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/</a>
-          </li>
-          <li class="post-copyright-license">
-            <strong>Copyright Notice:   </strong>
-            All articles in this blog are licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
-            unless stating additionally.
-          </li>
-         
-        </ul>
-<div>
-</div></div>
-      
-      
-        
-	<div id="comment">
-		<!-- 来必力City版安装代码 -->
-		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
-		<script type="text/javascript">
-		   (function(d, s) {
-		       var j, e = d.getElementsByTagName(s)[0];
-
-		       if (typeof LivereTower === 'function') { return; }
-
-		       j = d.createElement(s);
-		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-		       j.async = true;
-
-		       e.parentNode.insertBefore(j, e);
-		   })(document, 'script');
-		</script>
-		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-		</div>
-		<!-- City版安装代码已完成 -->
-	</div>
-
-
-
-      
-      
-        
-      
-
-    </footer>
   </div>
-  
-    
-  
 </article>
 
-<!-- Table of Contents -->
 
-  <aside id="toc-sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
-    
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-计算机终端的发展"><span class="nav-number">1.</span> <span class="nav-text">1. 计算机终端的发展</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#参考书籍"><span class="nav-number"></span> <span class="nav-text">参考书籍</span></a>
-    
-    </li></div>
-  </aside>
 
-</section>
         
-      </div>
-      
-      <footer id="footer">
-  
+          <div id="footer-post-container">
+  <div id="footer-post">
 
-  <div class="container">
-      	<div class="row">
-	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
-	      <p id="copyRightEn">Copyright &copy; 2013 - 2019 漫漫知何处 All Rights Reserved.</p>
-	      
-	      
-    		<p class="busuanzi_uv">
-				UV : <span id="busuanzi_value_site_uv"></span> |  
-				PV : <span id="busuanzi_value_site_pv"></span>
-		    </p>
-  		   
-		</div>
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
 
-		
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-计算机终端的发展"><span class="toc-number">1.</span> <span class="toc-text">1. 计算机终端的发展</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#参考书籍"><span class="toc-number"></span> <span class="toc-text">参考书籍</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&text=计算机终端（Computer Terminal）详解"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&title=计算机终端（Computer Terminal）详解"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&is_video=false&description=计算机终端（Computer Terminal）详解"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=计算机终端（Computer Terminal）详解&body=Check out this article: http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&title=计算机终端（Computer Terminal）详解"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&title=计算机终端（Computer Terminal）详解"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&title=计算机终端（Computer Terminal）详解"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&title=计算机终端（Computer Terminal）详解"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.lmoli.cc/2019/03/31/计算机终端（Computer-Terminal）详解/&name=计算机终端（Computer Terminal）详解&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 林小里
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
   </div>
 </footer>
 
-
-<!-- min height -->
-
-<script>
-    var wrapdiv = document.getElementById("wrap");
-    var contentdiv = document.getElementById("content");
-    var allheader = document.getElementById("allheader");
-
-    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
-    if (allheader != null) {
-      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
-    } else {
-      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
-    }
-</script>
     </div>
-    <!-- <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/tags" class="mobile-nav-link">Tags</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav> -->
-    
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
-<!-- mathjax config similar to math.stackexchange -->
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
+<!-- Google Analytics -->
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-</script>
+<!-- Baidu Analytics -->
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<!-- Disqus Comments -->
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/scripts.js"></script>
-
-
-
-
-  <script src="/js/dialog.js"></script>
-
-
-
-
-
-
-
-
-	<div style="display: none;">
-    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-  </div>
-
-
-
-	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-	</script>
-
-
-
-
-
-
-  </div>
-
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="myModalLabel">设置</h2>
-      </div>
-      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
-      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
-
-
-      <div class="modal-body">
-          <div style="margin:6px;">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
-              正文字号大小
-            </a>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-          <div class="panel-body">
-            您已调整页面字体大小
-          </div>
-        </div>
-      
-
-
-          <div style="margin:6px;">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
-              夜间护眼模式
-            </a>
-        </div>
-          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-          <div class="panel-body">
-            夜间模式已经开启，再次单击按钮即可关闭 
-          </div>
-        </div>
-
-        <div>
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        </div>
-         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-          <div class="panel-body">
-            漫漫知何处
-          </div>
-          <div class="panel-body">
-            Copyright © 2019 林小里 All Rights Reserved.
-          </div>
-        </div>
-      </div>
-
-
-      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
-      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
-      <div class="modal-footer">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-      </div>
-    </div>
-  </div>
-</div>
-  
-  <a id="rocket" href="#top" class=""></a>
-  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
-  
-    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
-  
 </body>
 </html>
